@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Surprise</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    font-family:'Cinzel',serif;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#3a2d00 0%,transparent 60%),
+    radial-gradient(circle at bottom,#1a1200 0%,transparent 60%);
+    opacity:.6;
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+    animation:fadeIn 1.5s ease;
+}
+
+.small{
+    font-size:18px;
+    color:#d4af37;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.message{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.sub{
+    font-size:18px;
+    color:#d8d8d8;
+    letter-spacing:1px;
+    margin-bottom:45px;
+}
+
+button{
+    padding:15px 45px;
+    font-size:18px;
+    font-family:'Cinzel',serif;
+    background:transparent;
+    color:#d4af37;
+    border:2px solid #d4af37;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 0 18px rgba(212,175,55,.25);
+}
+
+button:hover{
+    background:#d4af37;
+    color:#000;
+    transform:scale(1.08);
+    box-shadow:0 0 30px rgba(212,175,55,.6);
+}
+
+.sparkle{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:#d4af37;
+    border-radius:50%;
+    animation:twinkle 3s infinite;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(1);
+    }
+    50%{
+        opacity:1;
+        transform:scale(2);
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sparkle" style="top:15%;left:20%;animation-delay:0s;"></div>
+<div class="sparkle" style="top:30%;left:75%;animation-delay:1s;"></div>
+<div class="sparkle" style="top:70%;left:18%;animation-delay:2s;"></div>
+<div class="sparkle" style="top:82%;left:80%;animation-delay:.5s;"></div>
+<div class="sparkle" style="top:45%;left:90%;animation-delay:1.8s;"></div>
+
+<div class="container">
+
+    <div class="small">
+        A LITTLE SURPRISE
+    </div>
+
+    <div class="message">
+        Do You Want To<br>See Something Special?
+    </div>
+
+   
+
+    <button id="yesBtn">
+        YES
+    </button>
+
+</div>
+
+<script>
+
+document.getElementById("yesBtn").addEventListener("click", () => {
+
+    document.body.style.transition = "opacity .8s";
+    document.body.style.opacity = "0";
+
+
+    setTimeout(() => {
+        window.location.href = "world.html";
+    }, 700); // Adjust to match the sound length
+});
+
+</script>
+
+</body>
+</html>

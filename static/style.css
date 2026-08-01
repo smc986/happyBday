@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffd6e0,
+        #ffd6e0 20px,
+        #ffe4ec 20px,
+        #ffe4ec 40px
+    );
+}
+
+/* Center layout */
+.center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card UI */
+.card {
+    background: #fff0f5;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 2px dashed #ffb6c1;
+}
+
+/* Text */
+.text {
+    color: #d63384;
+}
+
+/* Cute image */
+.cute {
+    width: 120px;
+}
+
+/* Button */
+.btn {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 2px solid #d63384;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffd6e0;
+}
+
+.timeline-box {
+    background: #fff0f5;
+    padding: 40px;
+    border-radius: 30px;
+    width: 420px;
+    margin: auto;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border: 2px dashed #ffb6c1;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    color: #d63384;
+    margin-bottom: 15px;
+    
+}
+
+/* Background container */
+#bg-effects {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+
+/* 🤍 WHITE HEART (NO BORDER) */
+.heart {
+    width: 18px;
+    height: 18px;
+    background: white;
+    position: absolute;
+    transform: rotate(45deg);
+    opacity: 0.9;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -9px;
+    left: 0;
+}
+
+.heart::after {
+    left: -9px;
+    top: 0;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+/* Full container */
+.timeline-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+
+/* Heading */
+.main-heading {
+    text-align: center;
+    color: #d63384;
+    font-size: 32px;
+    margin-top: 60px;
+}
+
+/* Year buttons section */
+.timeline {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Cute buttons */
+.year-btn {
+    padding: 18px 30px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #ff9aa2, #ffb6c1);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.year-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Cat animation at bottom */
+.cat-box {
+    margin-bottom: 20px;
+}
+
+.cat {
+    width: 130px;
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+.choice-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Cute buttons */
+.choice-btn {
+    padding: 18px 30px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #ff9aa2, #ffb6c1);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.choice-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Container */
+.love-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 60px auto;
+    flex-wrap: wrap;
+}
+
+/* Paper style */
+.love-paper {
+    background: #fffafa;
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    border: 2px dashed #ffb6c1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: left;
+    font-family: 'Comic Sans MS', cursive;
+    color: #d63384;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* Slight paper effect */
+.love-paper::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: #ffe4ec;
+    z-index: -1;
+}
+
+/* Heading */
+.love-paper h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    
+}
+
+/* Cute animation side */
+.love-gif {
+    width: 200px;
+    animation: float 2s ease-in-out infinite;
+     margin-top: 290px;
+     margin-left: 5px;
+     
+}
+.paper-gif {
+    position: absolute;
+    bottom: -20px;   
+    left: -10px;
+
+    width: 100px;
+    pointer-events: none; 
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+.inline-gif {
+    width: 90px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+.password-input {
+    width: 250px;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: 2px solid black;
+    outline: none;
+    font-size: 14px;
+    background: #fff0f5;
+    color: black;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Placeholder style */
+.password-input::placeholder {
+    color: #ff99aa;
+}
+
+/* Focus effect */
+.password-input:focus {
+    border-color: black;
+    box-shadow: 0 0 10px rgba(255, 111, 145, 0.5);
+    
+}
+.row {
+    display: flex;
+    align-items: center;     /* vertical alignment */
+    justify-content: center; /* center horizontally */
+    gap: 20px;               /* space between button & gif */
+    margin-top: 15px;
+    position : relative;
+}
+.no-btn {
+    position: relative;
+}
+.btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: #ff6f91;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+       background: #ff6f91;
+}
+.login-gif {
+    width: 200px;
+     margin-top: 50px;
+     margin-left: 5px;
+     
+}
+

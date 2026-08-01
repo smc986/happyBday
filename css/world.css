@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+   font-family: 'Courier New', Courier, monospace;
+    background:
+        radial-gradient(circle at top,#3a1b5f 0%,#140018 45%,#000 100%);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#worldPage{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.world-content{
+
+    text-align:center;
+
+    animation:fadeIn 1.5s ease;
+}
+
+.welcome{
+
+    font-size:22px;
+
+    letter-spacing:10px;
+
+    color:#f5d9ff;
+
+    margin-bottom:25px;
+
+    text-shadow:0 0 15px rgba(255,255,255,.4);
+}
+
+.title{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:110px;
+
+    color:#ffd700;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 25px #ffd700,
+        0 0 40px #ff8fd3;
+
+    white-space:nowrap;
+}
+
+#s{
+
+    opacity:0;
+
+    display:inline-block;
+
+    transition:.8s ease;
+}
+
+#rest{
+
+    color:#ffffff;
+
+    font-family: "Cinzel", serif;
+
+    text-shadow:
+        0 0 12px #ffffff,
+        0 0 25px #ff5ca8;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .title{
+
+        font-size:60px;
+    }
+
+    .welcome{
+
+        font-size:16px;
+        letter-spacing:5px;
+    }
+}
+
+/* ---------- Global Responsive ---------- */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+img,
+video{
+    max-width:100%;
+    height:auto;
+}
+
+button{
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    h3{
+        font-size:22px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    button{
+        width:90%;
+        max-width:300px;
+        padding:14px;
+    }
+
+}

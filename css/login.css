@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#000;
+}
+
+.container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.login-box{
+
+    width:380px;
+    max-width:100%;
+
+    background:#111;
+
+    border:2px solid rgb(206, 86, 148);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 0 30px  rgb(206, 86, 148);
+}
+
+.login-box h1{
+
+    color:white;
+    margin-bottom:20px;
+}
+
+.login-box p{
+
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+
+    margin-bottom:20px;
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:rgb(223, 99, 99);
+
+    color:black;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+}
+
+#error{
+
+    color:red;
+
+    margin-top:15px;
+}
+
+/* ---------- Global Responsive ---------- */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+img,
+video{
+    max-width:100%;
+    height:auto;
+}
+
+button{
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    h3{
+        font-size:22px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    button{
+        width:90%;
+        max-width:300px;
+        padding:14px;
+    }
+
+}
