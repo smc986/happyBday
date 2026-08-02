@@ -219,7 +219,7 @@ function showEgg() {
         // Change to chick
         setTimeout(() => {
 
-            img.src = "../images/chick.png";
+            img.src = "images/chick.png";
 
             egg.querySelector(".break-text").style.display = "none";
 
