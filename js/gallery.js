@@ -189,7 +189,7 @@ function showEgg() {
     egg.style.top = (Math.random() * 80) + "%";
 
     egg.innerHTML = `
-        <img src="../images/egg.png" class="egg">
+        <img src="images/egg.png" class="egg">
         <div class="break-text">Break Me!</div>
         <div class="message" style="display:none;">
             ${messages[index]}
@@ -213,7 +213,7 @@ function showEgg() {
         setTimeout(() => {
 
             img.classList.remove("shake");
-            img.src = "../images/cracked.png";
+            img.src = "images/cracked.png";
 
         }, 700);
 
