@@ -164,12 +164,13 @@ const gallery = document.getElementById("gallery");
 const eggLayer = document.getElementById("eggLayer");
 
 const messages = [
-    "🐣 You make every day brighter ❤️",
+     "🎂 Happy Birthday pookie!",
+   
     "🌸 Stay happy always!",
-    "🎂 Happy Birthday!",
+    "🐣 Something is hidden search for it",
     "💖 Thank you for every memory.",
     "✨ I wish u a great success",
-    "🎁 One more surprise is waiting search it..."
+    
 ];
 
 let currentEgg = null;
