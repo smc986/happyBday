@@ -21,10 +21,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
     video.addEventListener("play", () => {
 
+        // Stop background music
         music.pause();
-          voices.forEach((voice) => {
-        voice.pause();
-    });
+
+        // Stop voice recordings
+        voices.forEach((voice) => {
+            voice.pause();
+        });
+
+        voicePlaying = false;
 
     });
 
@@ -40,7 +45,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     video.addEventListener("pause", () => {
 
-        // DON'T restart music while voice is playing
         if (voicePlaying) {
             return;
         }
@@ -60,10 +64,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
         voice.addEventListener("play", () => {
 
-            // Tell the program voice is playing
             voicePlaying = true;
 
-            // STOP BACKGROUND MUSIC
+            // Stop background music
             music.pause();
 
             // Pause video
@@ -83,9 +86,27 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
 
+        // Voice paused
+        voice.addEventListener("pause", () => {
+
+            // Check if this voice actually ended
+            if (!voice.ended) {
+
+                voicePlaying = false;
+
+                // Resume background music
+                if (video.paused || video.ended) {
+                    music.play().catch(() => {});
+                }
+
+            }
+
+        });
+
+
+        // Voice finished
         voice.addEventListener("ended", () => {
 
-            // Voice finished
             voicePlaying = false;
 
             // Resume background music
