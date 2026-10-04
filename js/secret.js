@@ -119,3 +119,31 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// =====================================
+// VOICE CARD SCROLLING
+// =====================================
+
+function scrollVoices(direction) {
+
+    const container = document.getElementById("voiceContainer");
+
+    if (!container) return;
+
+    const card = container.querySelector(".voice-card");
+
+    if (!card) return;
+
+    const cardStyle = window.getComputedStyle(card);
+    const containerStyle = window.getComputedStyle(container);
+
+    const cardWidth = card.offsetWidth;
+    const gap = parseFloat(containerStyle.columnGap) || 18;
+
+    const scrollAmount = cardWidth + gap;
+
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+    });
+}
