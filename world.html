@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sagar's World</title>
+
+    <link rel="stylesheet" href="css/world.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="worldPage">
+
+    <div class="world-content">
+
+        <h2 class="welcome">WELCOME TO</h2>
+
+        <h1 class="title">
+            <span id="s">S</span><span id="rest"></span>
+        </h1>
+
+    </div>
+
+</div>
+
+<!-- Special Click Sound for S -->
+<audio id="sClick" preload="auto">
+    <source src="images/click2.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Typing Sound -->
+<audio id="typingSound" preload="auto">
+    <source src="images/key2.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="dingSound" preload="auto">
+    <source src="images/ding3.mp3" type="audio/wav">
+</audio>
+<script>
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const s = document.getElementById("s");
+    const rest = document.getElementById("rest");
+
+    const sClick = document.getElementById("sClick");
+    const typingSound = document.getElementById("typingSound");
+
+    const dingSound = document.getElementById("dingSound");
+
+    const text = "AGAR'S WORLD";
+    let i = 0;
+
+    if (!s || !rest) return;
+
+    // Play special click for S
+    function playSClick() {
+        sClick.currentTime = 0;
+        sClick.play().catch(() => {});
+    }
+
+    // Play typing sound
+    function playTyping() {
+        typingSound.currentTime = 0;
+        typingSound.play().catch(() => {});
+    }
+
+    // Show S
+    setTimeout(() => {
+
+         playSClick();           // Play first
+
+    setTimeout(() => {
+        s.style.opacity = "1";
+    }, 10);      
+
+        // Move S slightly
+        setTimeout(() => {
+
+            s.style.transform = "translateX(-15px)";
+            s.style.transition = "0.8s ease";
+
+            // Start typing after slide
+            setTimeout(typeText, 500);
+
+        }, 800);
+
+    }, 300);
+
+    function typeText() {
+
+    if (i < text.length) {
+
+        const ch = text.charAt(i);
+
+        if (ch !== " ") {
+            playTyping();
+        }
+
+        setTimeout(() => {
+            rest.textContent += ch;
+        }, 15); // 10-20 ms works well
+
+        i++;
+
+        setTimeout(typeText, 120);
+
+    } else {
+
+        playDing();
+
+    // Wait before going to home page
+    setTimeout(() => {
+        window.location.href = "home.html";
+    }, 2000);
+
+    }
+}
+
+function playDing() {
+    dingSound.currentTime = 0;
+    dingSound.play().catch(() => {});
+}
+
+});
+
+</script>
+
+</body>
+</html>

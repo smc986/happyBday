@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+button{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+
+    padding: 18px 45px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #ff5ca8;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    z-index: 1000;
+}
+
+button:hover{
+
+    background: white;
+
+    color: #ff5ca8;
+
+    transform: scale(1.08);
+}
+
+@media(max-width:768px){
+
+    button{
+
+        top:20px;
+        right:20px;
+
+        padding:14px 28px;
+
+        font-size:16px;
+    }
+
+}
+h1{
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 700;
+    width: 200px;
+    gap: 200px;
+    color: #fbfafb;
+    line-height: 0.9;
+    text-align: center;
+}
+
+body{
+ margin:0;
+    min-height:100vh;
+
+    background-image: url("../images/p1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    color:white;
+      font-family: 'Bodoni Moda', serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 700;
+    
+    line-height: 0.9;
+    text-align: center;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+.container{
+
+    width:100%;
+    max-width:1200px;
+
+    text-align:center;
+
+    animation:fade 2s;
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+
+.subtitle{
+
+    margin-top:15px;
+
+    color:#ddd;
+
+    font-size:20px;
+
+    margin-bottom:50px;
+}
+
+.photo-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+}
+
+.photo{
+
+    width:320px;
+    height:180px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:1px solid rgb(7, 5, 6);
+
+    box-shadow:0 0 25px rgb(227, 236, 228);
+
+    transition:.5s;
+}
+
+.photo:hover{
+
+    transform:scale(1.05);
+}
+
+.photo img{
+
+    width:100%;
+
+    display:block;
+}
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:48px;
+    }
+
+    .subtitle{
+
+        font-size:16px;
+    }
+
+    .photo{
+
+        width:90%;
+    }
+
+}
+
