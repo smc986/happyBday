@@ -17,7 +17,7 @@ function checkPassword(){
 
     setTimeout(()=>{
 
-        window.location.href="secret.html";
+        window.location.href="extra.html";
 
     },800);
 
